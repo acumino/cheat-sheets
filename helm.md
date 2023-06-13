@@ -1,4 +1,15 @@
-**Helm Basics:**
+## HELM Commands Cheat Sheet
+
+**Table of Contents:**
+- [HELM Commands Cheat Sheet](#helm-commands-cheat-sheet)
+  - [Helm Basics](#helm-basics)
+  - [Chart Configuration](#chart-configuration)
+  - [Working with Repositories](#working-with-repositories)
+  - [Hooks and Lifecycle Management](#hooks-and-lifecycle-management)
+  - [Helm Security](#helm-security)
+
+### Helm Basics
+
 - `helm create <chart-name>`: Create a new Helm chart.
 - `helm install <release-name> <chart-name>`: Install a chart and create a release.
 - `helm upgrade <release-name> <chart-name>`: Upgrade a release to a new version of a chart.
@@ -17,7 +28,8 @@
 - `helm repo add <repository-name> <repository-url>`: Add a new Helm repository.
 - `helm repo update`: Update the local cache of Helm repositories.
 
-**Chart Configuration:**
+### Chart Configuration
+
 - `helm show chart <chart-name>`: Show the chart details and metadata.
 - `helm show values <chart-name>`: Show the default values of a chart.
 - `helm get values <release-name>`: Get the overridden values of a release.
@@ -35,7 +47,8 @@
 - `helm install --set-json <key=value>`: Override values using JSON syntax during installation.
 - `helm upgrade --set-json <key=value>`: Override values using JSON syntax during upgrade.
 
-**Working with Repositories:**
+### Working with Repositories
+
 - `helm repo list`: List all added Helm repositories.
 - `helm repo update`: Update the local cache of Helm repositories.
 - `helm repo remove <repository-name>`: Remove a Helm repository from the local configuration.
@@ -44,11 +57,13 @@
 - `helm pull <repository-name>/<chart-name>`: Download a chart from a repository without installing it.
 - `helm repo index <chart-directory>`: Generate an index file for a local chart repository.
 
-**Hooks and Lifecycle Management:**
+### Hooks and Lifecycle Management
+
 - `helm test <release-name>`: Run tests defined in a chart.
 - `helm plugin install <plugin-name>`: Install a Helm plugin.
 - `helm plugin uninstall <plugin-name>`: Uninstall a Helm plugin.
 
-**Helm Security:**
+### Helm Security
+
 - `helm repo add <repository-name> <repository-url> --username <username> --password <password>`: Add a Helm repository with authentication credentials.
 - `helm repo update --username <username> --password <password>`: Update the local cache of Helm repositories with authentication credentials.

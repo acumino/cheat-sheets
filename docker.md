@@ -1,9 +1,24 @@
-**General Commands:**
+## Docker Commands Cheat Sheet
+
+**Table of Contents:**
+- [Docker Commands Cheat Sheet](#docker-commands-cheat-sheet)
+  - [General Commands](#general-commands)
+  - [Image Management](#image-management)
+  - [Container Management](#container-management)
+  - [Network Management](#network-management)
+  - [Volume Management](#volume-management)
+  - [Swarm Management](#swarm-management)
+  - [Secret Management](#secret-management)
+  - [Config Management](#config-management)
+
+### General Commands
+
 - `docker --version`: Display the Docker version information.
 - `docker info`: Display system-wide information about Docker.
 - `docker help`: Display help information for Docker commands.
 
-**Image Management:**
+### Image Management
+
 - `docker pull <image>`: Pull an image from a registry.
 - `docker push <image>`: Push an image to a registry.
 - `docker images`: List all images on the local system.
@@ -16,7 +31,8 @@
 - `docker import <file> <repository>:<tag>`: Import the contents from a tarball to create a filesystem image.
 - `docker export <container>`: Export a container's filesystem as a tar archive.
 
-**Container Management:**
+### Container Management
+
 - `docker run -it --name <container_name> <image>`: Run a container interactively from an image.
 - `docker run -d --name <container_name> <image>`: Run a container in detached mode (background).
 - `docker ps`: List running containers.
@@ -40,7 +56,8 @@
 - `docker rename <old_name> <new_name>`: Rename a container.
 - `docker update <container>`: Update configuration of one or more containers.
 
-**Network Management:**
+### Network Management
+
 - `docker network create <network_name>`: Create a new network.
 - `docker network ls`: List all networks.
 - `docker network rm <network_name>`: Remove a network.
@@ -48,14 +65,16 @@
 - `docker network disconnect <network_name> <container>`: Disconnect a container from a network.
 - `docker network inspect <network_name>`: Display detailed information on one or more networks.
 
-**Volume Management:**
+### Volume Management
+
 - `docker volume create <volume_name>`: Create a new volume.
 - `docker volume ls`: List all volumes.
 - `docker volume rm <volume_name>`: Remove a volume.
 - `docker volume inspect <volume_name>`: Display detailed information on one or more volumes.
 - `docker volume prune`: Remove all unused volumes.
 
-**Swarm Management:**
+### Swarm Management
+
 - `docker swarm init`: Initialize a swarm.
 - `docker swarm join`: Join a swarm as a worker node.
 - `docker swarm leave`: Leave the swarm.
@@ -77,13 +96,15 @@
 - `docker stack ps`: List the tasks in the stack.
 - `docker stack services`: List the services in the stack.
 
-**Secret Management:**
+### Secret Management
+
 - `docker secret create`: Create a secret.
 - `docker secret ls`: List secrets.
 - `docker secret rm`: Remove a secret.
 - `docker secret inspect`: Display detailed information on one or more secrets.
 
-**Config Management:**
+### Config Management
+
 - `docker config create`: Create a config.
 - `docker config ls`: List configs.
 - `docker config rm`: Remove a config.

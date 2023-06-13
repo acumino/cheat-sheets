@@ -1,4 +1,25 @@
-**Cluster Management:**
+## Kubernetes Commands Cheat Sheet
+
+**Table of Contents:**
+- [Kubernetes Commands Cheat Sheet](#kubernetes-commands-cheat-sheet)
+  - [Cluster Management](#cluster-management)
+  - [Namespace Management](#namespace-management)
+  - [Pod Management](#pod-management)
+  - [Deployment Management](#deployment-management)
+  - [Service Management](#service-management)
+  - [ConfigMap Management](#configmap-management)
+  - [RBAC (Role-Based Access Control) Management](#rbac-role-based-access-control-management)
+  - [Secret Management](#secret-management)
+  - [Ingress Management](#ingress-management)
+  - [Job and CronJob Management](#job-and-cronjob-management)
+  - [Volume Management](#volume-management)
+  - [ReplicaSet Management](#replicaset-management)
+  - [StatefulSet Management](#statefulset-management)
+  - [DaemonSet Management](#daemonset-management)
+  - [Metrics and Monitoring](#metrics-and-monitoring)
+
+### Cluster Management
+
 - `kubectl version`: Display the Kubernetes client and server version information.
 - `kubectl cluster-info`: Display cluster information.
 - `kubectl config view`: View the current kubeconfig configuration.
@@ -24,7 +45,8 @@
 - `kubectl label <resource_type> <resource_name> <label_key>=<label_value>`: Add a label to a resource.
 - `kubectl annotate <resource_type> <resource_name> <annotation_key>=<annotation_value>`: Add an annotation to a resource.
 
-**Namespace Management:**
+### Namespace Management
+
 - `kubectl get namespaces`: List all namespaces in the cluster.
 - `kubectl create namespace <namespace_name>`: Create a new namespace.
 - `kubectl delete namespace <namespace_name>`: Delete a namespace.
@@ -33,7 +55,8 @@
 - `kubectl apply -f <manifest.yaml> -n <namespace_name>`: Apply a manifest in a specific namespace.
 - `kubectl delete -f <manifest.yaml> -n <namespace_name>`: Delete a manifest from a specific namespace.
 
-**Pod Management:**
+### Pod Management
+
 - `kubectl get pods`: List all pods in the cluster.
 - `kubectl describe pod <pod_name>`: Show detailed information about a specific pod.
 - `kubectl create -f <pod_definition.yaml>`: Create a pod from a YAML file.
@@ -50,7 +73,8 @@
 - `kubectl attach <pod_name>`: Attach to a running container in a pod.
 - `kubectl wait pod <pod_name> --for=condition=<condition>`: Wait for a specific condition to be true for a pod.
 
-**Deployment Management:**
+### Deployment Management
+
 - `kubectl get deployments`: List all deployments in the cluster.
 - `kubectl describe deployment <deployment_name>`: Show detailed information about a specific deployment.
 - `kubectl create -f <deployment_definition.yaml>`: Create a deployment from a YAML file.
@@ -64,37 +88,43 @@
 - `kubectl rollout pause deployment/<deployment_name>`: Pause a deployment rollout.
 - `kubectl rollout resume deployment/<deployment_name>`: Resume a paused deployment rollout.
 
-**Service Management:**
+### Service Management
+
 - `kubectl get services`: List all services in the cluster.
 - `kubectl describe service <service_name>`: Show detailed information about a specific service.
 - `kubectl create -f <service_definition.yaml>`: Create a service from a YAML file.
 - `kubectl delete service <service_name>`: Delete a service.
 
-**ConfigMap Management:**
+### ConfigMap Management
+
 - `kubectl get configmaps`: List all ConfigMaps in the cluster.
 - `kubectl describe configmap <configmap_name>`: Show detailed information about a specific ConfigMap.
 - `kubectl create configmap <configmap_name> --from-literal=<key>=<value>`: Create a ConfigMap with literal values.
 - `kubectl create configmap <configmap_name> --from-file=<path_to_directory>`: Create a ConfigMap from a directory.
 
-**RBAC (Role-Based Access Control) Management**:
+### RBAC (Role-Based Access Control) Management
+
 - `kubectl create role <role_name> --verb=<verb> --resource=<resource>`: Create a role with specified verbs and resources.
 - `kubectl create rolebinding <rolebinding_name> --role=<role_name> --user=<user_name>`: Create a role binding to bind a role to a user.
 - `kubectl create clusterrole <clusterrole_name> --verb=<verb> --resource=<resource>`: Create a cluster role with specified verbs and resources.
 - `kubectl create clusterrolebinding <clusterrolebinding_name> --clusterrole=<clusterrole_name> --user=<user_name>`: Create a cluster role binding to bind a cluster role to a user.
 
-**Secret Management:**
+### Secret Management
+
 - `kubectl get secrets`: List all secrets in the cluster.
 - `kubectl describe secret <secret_name>`: Show detailed information about a specific secret.
 - `kubectl create secret generic <secret_name> --from-literal=<key>=<value>`: Create a secret with literal values.
 - `kubectl create secret generic <secret_name> --from-file=<path_to_file>`: Create a secret from a file.
 
-**Ingress Management:**
+### Ingress Management
+
 - `kubectl get ingresses`: List all ingresses in the cluster.
 - `kubectl describe ingress <ingress_name>`: Show detailed information about a specific ingress.
 - `kubectl create -f <ingress_definition.yaml>`: Create an ingress from a YAML file.
 - `kubectl delete ingress <ingress_name>`: Delete an ingress.
 
-**Job and CronJob Management:**
+### Job and CronJob Management
+
 - `kubectl get jobs`: List all jobs in the cluster.
 - `kubectl describe job <job_name>`: Show detailed information about a specific job.
 - `kubectl create -f <job_definition.yaml>`: Create a job from a YAML file.
@@ -106,13 +136,15 @@
 - `kubectl wait job <job_name> --for=condition=<condition>`: Wait for a specific condition to be true for a job.
 - `kubectl wait cronjob <cronjob_name> --for=condition=<condition>`: Wait for a specific condition to be true for a cron job.
 
-**Volume Management:**
+### Volume Management
+
 - `kubectl get pv`: List all persistent volumes in the cluster.
 - `kubectl describe pv <persistent_volume_name>`: Show detailed information about a specific persistent volume.
 - `kubectl get pvc`: List all persistent volume claims in the cluster.
 - `kubectl describe pvc <persistent_volume_claim_name>`: Show detailed information about a specific persistent volume claim.
 
-**ReplicaSet Management:**
+### ReplicaSet Management
+
 - `kubectl get replicasets`: List all ReplicaSets in the cluster.
 - `kubectl describe replicasets <replicaset_name>`: Show detailed information about a specific ReplicaSet.
 - `kubectl scale replicasets <replicaset_name> --replicas=<count>`: Scale a ReplicaSet to the specified number of replicas.
@@ -120,7 +152,8 @@
 - `kubectl rollout history replicaset <replicaset_name>`: View the revision history of a ReplicaSet.
 - `kubectl rollout undo replicaset <replicaset_name>`: Roll back a ReplicaSet to a previous revision.
 
-**StatefulSet Management:**
+### StatefulSet Management
+
 - `kubectl get statefulsets`: List all StatefulSets in the cluster.
 - `kubectl describe statefulset <statefulset_name>`: Show detailed information about a specific StatefulSet.
 - `kubectl scale statefulsets <statefulset_name> --replicas=<count>`: Scale a StatefulSet to the specified number of replicas.
@@ -128,7 +161,8 @@
 - `kubectl rollout history statefulset <statefulset_name>`: View the revision history of a StatefulSet.
 - `kubectl rollout undo statefulset <statefulset_name>`: Roll back a StatefulSet to a previous revision.
 
-**DaemonSet Management:**
+### DaemonSet Management
+
 - `kubectl get daemonsets`: List all DaemonSets in the cluster.
 - `kubectl describe daemonset <daemonset_name>`: Show detailed information about a specific DaemonSet.
 - `kubectl scale daemonsets <daemonset_name> --replicas=<count>`: Scale a DaemonSet to the specified number of replicas.
@@ -136,7 +170,8 @@
 - `kubectl rollout history daemonset <daemonset_name>`: View the revision history of a DaemonSet.
 - `kubectl rollout undo daemonset <daemonset_name>`: Roll back a DaemonSet to a previous revision.
 
-**Metrics and Monitoring:**
+### Metrics and Monitoring
+
 - `kubectl top nodes`: Show resource usage (CPU and memory) of nodes.
 - `kubectl top nodes --sort-by=<resource>`: Show resource usage (CPU and memory) of nodes sorted by a specific resource.
 - `kubectl top pods`: Show resource usage (CPU and memory) of pods.

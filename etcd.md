@@ -1,7 +1,22 @@
-**Connecting to the etcd Cluster:**
+## ETCD Commands Cheat Sheet
+
+**Table of Contents:**
+- [ETCD Commands Cheat Sheet](#etcd-commands-cheat-sheet)
+    - [Connecting to the etcd Cluster](#connecting-to-the-etcd-cluster)
+    - [Key-Value Operations](#key-value-operations)
+    - [Directory Operations](#directory-operations)
+    - [Lease Operations](#lease-operations)
+    - [Cluster Operations](#cluster-operations)
+    - [Snapshot Operations](#snapshot-operations)
+    - [Authentication and Authorization](#authentication-and-authorization)
+    - [Maintenance Operations](#maintenance-operations)
+
+#### Connecting to the etcd Cluster
+
 - `etcdctl --endpoints=<endpoint1>,<endpoint2>,... <command>`: Connect to the etcd cluster.
 
-**Key-Value Operations:**
+#### Key-Value Operations
+
 - `etcdctl put <key> <value>`: Set a key-value pair.
 - `etcdctl get <key>`: Get the value of a key.
 - `etcdctl get --prefix <prefix>`: List keys with a prefix.
@@ -11,17 +26,20 @@
 - `etcdctl txn --interactive`: Set a key-value pair with a transaction.
 - `etcdctl watch <key> [--prefix]`: Watch for changes on a key or prefix.
 
-**Directory Operations:**
+#### Directory Operations
+
 - `etcdctl mkdir <directory>`: Create a directory.
 - `etcdctl ls <directory>`: List all keys under a directory.
 - `etcdctl rmdir <directory>`: Delete a directory and all its contents.
 
-**Lease Operations:**
+#### Lease Operations
+
 - `etcdctl lease grant <ttl>`: Create a lease.
 - `etcdctl lease revoke <lease_id>`: Revoke a lease.
 - `etcdctl lease keep-alive <lease_id>`: Keep a lease alive.
 
-**Cluster Operations:**
+#### Cluster Operations
+
 - `etcdctl cluster-health`: Get the status of the etcd cluster.
 - `etcdctl endpoint health`: Check the health of the cluster.
 - `etcdctl member list`: List all members in the cluster.
@@ -30,11 +48,13 @@
 - `etcdctl member update <member_id> --peer-urls=<new_peer_urls>`: Update a member's peer URLs.
 - `etcdctl member promote <member-id>`: Promote a non-voting member to a voting member.
 
-**Snapshot Operations:**
+#### Snapshot Operations
+
 - `etcdctl snapshot save <filename>`: Create a snapshot.
 - `etcdctl snapshot restore <filename>`: Restore a snapshot.
 
-**Authentication and Authorization:**
+#### Authentication and Authorization
+
 - `etcdctl auth enable`: Enable authentication.
 - `etcdctl auth disable`: Disable authentication.
 - `etcdctl user add <user>`: Add a user.
@@ -49,7 +69,8 @@
 - `etcdctl role remove <role>`: Remove a role.
 - `etcdctl role list`: List roles.
 
-**Maintenance Operations:**
+#### Maintenance Operations
+
 - `etcdctl compact <revision>`: Compact the event history.
 - `etcdctl defrag`: Defragment the storage backend.
 - `etcdctl alarm list`: Check the alarm list.

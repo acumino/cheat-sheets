@@ -1,10 +1,25 @@
-**Modes:**
+## Vim Commands Cheat Sheet
+
+**Table of Contents:**
+- [Vim Commands Cheat Sheet](#vim-commands-cheat-sheet)
+  - [Modes](#modes)
+  - [Navigation](#navigation)
+  - [Editing](#editing)
+  - [Visual Selection](#visual-selection)
+  - [Saving and Quitting](#saving-and-quitting)
+  - [Search and Replace](#search-and-replace)
+  - [Windows and Tabs](#windows-and-tabs)
+  - [Miscellaneous](#miscellaneous)
+
+### Modes
+
 - **Normal mode**: Default mode for navigation and executing commands.
 - **Insert mode**: Mode for inserting text.
 - **Visual mode**: Mode for selecting and manipulating text.
 - **Command-line mode**: Mode for entering Vim commands.
 
-**Navigation:**
+### Navigation
+
 - **h**: Move left.
 - **j**: Move down.
 - **k**: Move up.
@@ -24,7 +39,8 @@
 - **Ctrl+y**: Scroll the window up one line.
 - **:{line_number}**: Move to a specific line number.
 
-**Editing:**
+### Editing
+
 - **i**: Enter insert mode at the current cursor position.
 - **I**: Enter insert mode at the beginning of the line.
 - **a**: Enter insert mode after the current cursor position.
@@ -46,7 +62,8 @@
 - **J**: Join the current line with the line below.
 - **.**: Repeat the last change.
 
-**Visual Selection:**
+### Visual Selection
+
 - **v**: Enter visual mode to select characters.
 - **V**: Enter visual mode to select whole lines.
 - **Ctrl+v**: Enter visual block mode to select rectangular blocks.
@@ -57,7 +74,8 @@
 - **>`**: Indent the selected lines.
 - **<`**: Unindent the selected lines.
 
-**Saving and Quitting:**
+### Saving and Quitting
+
 - **:w**: Save the current file.
 - **:wq**: Save the file and quit Vim.
 - **:x**: Same as :wq (save and quit).
@@ -65,7 +83,8 @@
 - **:q!**: Quit Vim without saving changes.
 - **:w {filename}**: Save the current buffer to a new file.
 
-**Search and Replace:**
+### Search and Replace
+
 - **/{pattern}**: Search for a pattern forward.
 - **?{pattern}**: Search for a pattern backward.
 - **n**: Move to the next search result.
@@ -73,7 +92,8 @@
 - **:%s/{pattern}/{replacement}/g**: Search and replace globally in the file.
 - **:%s/{pattern}/{replacement}/gc**: Search and replace globally in the file with confirmation.
 
-**Windows and Tabs:**
+### Windows and Tabs
+
 - **:sp {filename}**: Split the window horizontally and open a file.
 - **:vsp {filename}**: Split the window vertically and open a file.
 - **Ctrl+w+w**: Cycle through open windows.
@@ -87,7 +107,8 @@
 - **gT**: Move to the previous tab.
 - **:tabclose**: Close the current tab.
 
-**Miscellaneous:**
+### Miscellaneous
+
 - **:set number**: Show line numbers.
 - **:set nonumber**: Hide line numbers.
 - **:set list**: Show invisible characters.
